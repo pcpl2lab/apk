@@ -1,0 +1,8 @@
+/*/APKINDEX.tar.gz
+  Cache-Control: no-cache
+
+/*/*.apk
+  Cache-Control: public, max-age=31536000, immutable
+
+/pcpl2lab.rsa.pub
+  Cache-Control: public, max-age=3600

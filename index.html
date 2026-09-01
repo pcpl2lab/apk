@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sshforward Alpine repository</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 46rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; }
+  pre { background: #f4f4f5; padding: 1rem; overflow-x: auto; border-radius: 6px; }
+  code { font-family: ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<h1>sshforward Alpine repository</h1>
+<p>Alpine packages for
+<a href="https://github.com/pcpl2lab/sshforward">sshforward</a>,
+an SSH port forwarding manager.</p>
+
+<h2>Add the repository</h2>
+<pre><code>curl -fsSL https://apk.pcpl2lab.ovh/pcpl2lab.rsa.pub | sudo tee /etc/apk/keys/pcpl2lab.rsa.pub >/dev/null
+echo "https://apk.pcpl2lab.ovh" | sudo tee -a /etc/apk/repositories
+sudo apk update
+sudo apk add sshforward</code></pre>
+
+<h2>Later updates</h2>
+<pre><code>sudo apk add --upgrade sshforward</code></pre>
+
+<p>Architectures: aarch64 armhf x86 x86_64. Packages and indexes are signed.</p>
+</body>
+</html>
